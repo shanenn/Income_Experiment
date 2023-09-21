@@ -1,0 +1,121 @@
+Hours per Week,Age,Workclass,Highest Degree,Marital Status,Race,Gender,Native Country,Occupation,Income Actual,Income Adjust,Income,ML Pred
+40,24,Private,High School Graduate,Never Married,Black,Male,United States,Handler/Cleaner,5220,8874.58194,0,0
+35,25,Private,High School Graduate,Married,White,Male,United States,Craft/Repair,20010,34019.23077,0,0
+40,39,Private,Less than High School,Separated,White,Female,Mexico,Other Services,12000,20401.33779,0,0
+40,23,Private,Undergraduate Degree,Never Married,White,Female,United States,Professional Specialty,26000,44202.89855,0,0
+30,24,Private,Undergraduate Degree,Never Married,White,Female,United States,Administrative/Clerical,1032,1754.51505,0,0
+40,24,Federal Government,High School Graduate,Never Married,White,Female,United States,Administrative/Clerical,18026,30646.20959,0,0
+48,23,Private,High School Graduate,Never Married,White,Female,El Salvador,Other Services,5919,10062.95987,0,0
+6,18,Private,Less than High School,Never Married,White,Male,United States,Handler/Cleaner,5000,8500.557414,0,0
+40,28,Local Government,Undergraduate Degree,Divorced,White,Female,United States,Professional Specialty,17001,28903.59532,0,0
+70,57,Private,Less than High School,Divorced,White,Female,Germany,Administrative/Clerical,15010,25518.67336,0,0
+24,46,Private,High School Graduate,Never Married,White,Female,United States,Other Services,6000,10200.6689,0,0
+10,22,Private,Undergraduate Degree,Never Married,White,Female,United States,Administrative/Clerical,2100,3570.234114,0,0
+25,27,Private,High School Graduate,Never Married,White,Male,United States,Other Services,8000,13600.89186,0,0
+36,47,Private,Less than High School,Married,Native American/Eskimo,Male,United States,Other Services,13000,22101.44928,0,0
+40,18,Private,High School Graduate,Never Married,Black,Male,United States,Administrative/Clerical,3876,6589.632107,0,0
+19,21,Private,High School Graduate,Married,White,Female,United States,Administrative/Clerical,22656,38517.72575,0,0
+40,25,Private,High School Graduate,Married,White,Male,Mexico,Other Services,10000,17001.11483,0,0
+70,33,Private,Less than High School,Divorced,White,Male,United States,Handler/Cleaner,19572,33274.58194,0,0
+40,18,Private,High School Graduate,Never Married,White,Male,United States,Administrative/Clerical,3000,5100.334448,0,0
+20,20,Private,High School Graduate,Never Married,White,Female,United States,Administrative/Clerical,9262,15746.43255,0,0
+25,23,Private,High School Graduate,Never Married,White,Female,United States,Professional Specialty,6000,10200.6689,0,0
+40,21,Private,High School Graduate,Never Married,White,Male,Mexico,Handler/Cleaner,7000,11900.78038,0,0
+40,40,Private,Undergraduate Degree,Married (Spouse Absent),Other,Male,Mexico,Other Services,2500,4250.278707,0,0
+41,30,Private,Undergraduate Degree,Never Married,White,Female,United States,Other Services,20020,34036.23188,0,0
+40,23,Local Government,High School Graduate,Never Married,White,Male,United States,Transport/Moving,12340,20979.3757,0,0
+25,18,Private,High School Graduate,Never Married,White,Female,United States,Sales,8252,14029.31996,0,0
+40,39,Private,Undergraduate Degree,Divorced,White,Female,United States,Tech Support,27200,46243.03233,0,0
+42,29,Local Government,Undergraduate Degree,Never Married,Black,Female,United States,Professional Specialty,26000,44202.89855,0,0
+40,47,Private,Undergraduate Degree,Never Married,White,Male,United States,Other Services,6000,10200.6689,0,0
+43,22,Federal Government,High School Graduate,Never Married,White,Male,United States,Handler/Cleaner,17000,28901.89521,0,0
+40,26,Private,Undergraduate Degree,Never Married,Black,Female,United States,Machine Operator/Inspector,13210,22458.47269,0,0
+40,27,Private,High School Graduate,Never Married,Black,Male,United States,Craft/Repair,10000,17001.11483,0,0
+40,51,Local Government,Less than High School,Never Married,Black,Female,United States,Farming/Fishing,10000,17001.11483,0,0
+45,22,State Government,High School Graduate,Never Married,White,Female,United States,Other Services,11310,19228.26087,0,0
+64,29,State Government,Undergraduate Degree,Never Married,White,Female,United States,Tech Support,25400,43182.83166,0,0
+40,23,Private,Undergraduate Degree,Married,White,Male,United States,Sales,16323,27750.91973,0,0
+35,33,Private,High School Graduate,Separated,White,Male,Puerto Rico,Handler/Cleaner,4500,7650.501672,0,0
+40,29,Private,High School Graduate,Never Married,White,Male,United States,Craft/Repair,19021,32337.82051,0,0
+25,26,Local Government,High School Graduate,Divorced,White,Female,United States,Administrative/Clerical,7300,12410.81382,0,0
+2,35,Self Employed (Unincorporated),Less than High School,Married,White,Female,United States,Other Services,14420,24515.60758,0,0
+40,61,Private,Undergraduate Degree,Widowed,Black,Female,United States,Machine Operator/Inspector,20000,34002.22965,0,0
+10,20,State Government,High School Graduate,Never Married,White,Female,United States,Administrative/Clerical,1900,3230.211817,0,0
+35,38,Private,High School Graduate,Never Married,Asian/Pacific Islander,Female,Hong,Executive/Managerial,15600,26521.73913,0,0
+40,54,Private,High School Graduate,Divorced,White,Female,United States,Administrative/Clerical,23100,39272.57525,0,0
+65,26,Self Employed (Unincorporated),Undergraduate Degree,Never Married,White,Male,United States,Farming/Fishing,18650,31707.07915,0,0
+50,39,State Government,Graduate Degree,Never Married,White,Male,United States,Professional Specialty,89176,151609.1416,1,1
+40,33,Private,High School Graduate,Married,White,Male,United States,Machine Operator/Inspector,38050,64689.24192,1,1
+40,36,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Male,Germany,Sales,45200,76845.03902,1,1
+47,39,Private,Graduate Degree,Married,White,Female,United States,Executive/Managerial,99999,170009.4482,1,1
+43,45,Private,High School Graduate,Never Married,White,Female,United States,Executive/Managerial,42987,73082.69231,1,1
+40,34,Federal Government,Undergraduate Degree,Never Married,White,Male,United States,Administrative/Clerical,30800,52363.43367,1,1
+40,43,Local Government,High School Graduate,Married,White,Male,United States,Executive/Managerial,54350,92401.05909,1,1
+40,33,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Male,United States,Executive/Managerial,50004,85012.37458,1,1
+40,47,Private,Undergraduate Degree,Never Married,White,Female,United States,Professional Specialty,36838,62628.7068,1,1
+65,33,Self Employed (Unincorporated),High School Graduate,Married,White,Male,United States,Transport/Moving,33288,56593.31104,1,1
+90,42,Private,High School Graduate,Married,White,Male,United States,Sales,50011,85024.27536,1,1
+40,46,Local Government,High School Graduate,Married,White,Male,United States,Craft/Repair,32531,55306.32664,1,1
+45,31,Private,High School Graduate,Married,White,Male,United States,Craft/Repair,45275,76972.54738,1,1
+40,57,Private,Undergraduate Degree,Widowed,White,Male,United States,Professional Specialty,72052,122496.4326,1,1
+80,41,Private,Graduate Degree,Married,White,Male,United States,Professional Specialty,99999,170009.4482,1,1
+50,41,Private,Undergraduate Degree,Married,White,Male,United States,Executive/Managerial,58714,99820.3456,1,1
+50,33,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Female,United States,Professional Specialty,86848,147651.2821,1,1
+40,39,Private,High School Graduate,Married,White,Male,United States,Farming/Fishing,29700,50493.31104,1,1
+40,51,Private,High School Graduate,Married,White,Male,United States,Transport/Moving,73622,125165.6076,1,1
+40,58,Private,High School Graduate,Married,White,Male,United States,Craft/Repair,50250,85430.60201,1,1
+50,37,Private,High School Graduate,Married,White,Male,United States,Craft/Repair,77100,131078.5953,1,1
+40,30,Private,Undergraduate Degree,Married,White,Female,United States,Tech Support,42200,71744.70457,1,1
+40,32,Private,High School Graduate,Married,White,Male,United States,Sales,54210,92163.04348,1,1
+99,55,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Male,United States,Executive/Managerial,46500,79055.18395,1,1
+50,37,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Male,United States,Farming/Fishing,52250,88830.82497,1,1
+43,54,Private,Graduate Degree,Married,White,Male,United States,Executive/Managerial,99999,170009.4482,1,1
+40,42,Private,High School Graduate,Married,White,Male,United States,Craft/Repair,54000,91806.02007,1,1
+60,41,Self Employed (Incorporated),Undergraduate Degree,Married,Asian/Pacific Islander,Male,Taiwan,Executive/Managerial,99999,170009.4482,1,1
+40,58,Private,High School Graduate,Married,White,Male,United States,Executive/Managerial,63870,108586.1204,1,1
+60,41,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Male,United States,Craft/Repair,99999,170009.4482,1,1
+50,48,Local Government,Graduate Degree,Separated,White,Male,United States,Professional Specialty,40963,69641.66667,1,1
+40,67,Private,Undergraduate Degree,Married,White,Male,United States,Professional Specialty,53000,90105.90858,1,1
+40,33,Private,Undergraduate Degree,Married,White,Male,Mexico,Sales,36000,61204.01338,1,1
+40,57,Self Employed (Incorporated),Undergraduate Degree,Married,White,Male,United States,Executive/Managerial,99999,170009.4482,1,1
+36,55,Private,High School Graduate,Married,White,Male,United States,Executive/Managerial,41601,70726.33779,1,1
+46,50,Private,Undergraduate Degree,Married,White,Male,United States,Administrative/Clerical,71112,120898.3278,1,1
+40,39,Private,Undergraduate Degree,Married,White,Male,United States,Craft/Repair,52500,89255.85284,1,1
+50,71,Private,Undergraduate Degree,Married,Black,Male,United States,Professional Specialty,75518,128389.019,1,1
+40,36,State Government,Graduate Degree,Never Married,White,Male,United States,Professional Specialty,32850,55848.66221,1,1
+40,38,Self Employed (Incorporated),High School Graduate,Married,White,Male,United States,Executive/Managerial,47901,81437.04013,1,1
+45,35,Private,Undergraduate Degree,Divorced,White,Male,United States,Craft/Repair,90000,153010.0334,1,1
+45,57,State Government,Graduate Degree,Married,White,Male,United States,Executive/Managerial,78417,133317.6421,1,1
+40,62,Private,Undergraduate Degree,Married,White,Male,United States,Tech Support,65499,111355.602,1,1
+40,64,Private,High School Graduate,Married,White,Male,United States,Executive/Managerial,42940,73002.78707,1,1
+45,28,Private,Undergraduate Degree,Married,White,Male,United States,Professional Specialty,32267,54857.49721,1,1
+40,33,Private,High School Graduate,Married,White,Male,United States,Handler/Cleaner,15414,26205.51839,0,1
+45,34,Private,High School Graduate,Married,White,Male,United States,Transport/Moving,28173,47897.2408,0,1
+40,25,Private,Undergraduate Degree,Married,White,Female,United States,Administrative/Clerical,27400,46583.05463,0,1
+50,60,Self Employed (Unincorporated),High School Graduate,Married,White,Male,United States,Executive/Managerial,14000,23801.56076,0,1
+40,57,Private,High School Graduate,Married,White,Female,United States,Administrative/Clerical,5808,9874.247492,0,1
+40,64,Private,Undergraduate Degree,Married,Asian/Pacific Islander,Male,Philippines,Sales,22146,37650.6689,0,1
+42,30,Private,High School Graduate,Married,White,Male,United States,Sales,19073,32426.22631,0,1
+40,28,State Government,High School Graduate,Married,White,Male,United States,Protective Services,26103,44378.01003,0,1
+40,41,Private,High School Graduate,Married,Other,Male,United States,Craft/Repair,20296,34505.46265,0,1
+37,40,Private,High School Graduate,Married,White,Male,United States,Machine Operator/Inspector,22000,37402.45262,0,1
+72,36,Self Employed (Unincorporated),Undergraduate Degree,Married,White,Male,United States,Farming/Fishing,27701,47094.78818,0,1
+44,45,Private,Undergraduate Degree,Divorced,White,Female,United States,Executive/Managerial,14000,23801.56076,0,1
+45,51,Private,Less than High School,Married,White,Male,United States,Handler/Cleaner,11513,19573.3835,0,1
+40,60,Private,Less than High School,Married,White,Male,United States,Craft/Repair,23000,39102.5641,0,1
+40,31,Self Employed (Unincorporated),High School Graduate,Married,White,Male,United States,Farming/Fishing,23200,39442.5864,0,1
+45,41,Private,High School Graduate,Never Married,White,Female,United States,Professional Specialty,49050,83390.46823,1,0
+40,53,State Government,High School Graduate,Divorced,White,Female,United States,Administrative/Clerical,49050,83390.46823,1,0
+50,31,Private,Undergraduate Degree,Never Married,White,Male,United States,Administrative/Clerical,40000,68004.45931,1,0
+40,22,Private,Less than High School,Married,White,Male,United States,Craft/Repair,35962,61139.40914,1,0
+45,40,Private,High School Graduate,Divorced,White,Male,United States,Craft/Repair,30319,51545.68004,1,0
+84,66,Self Employed (Unincorporated),Less than High School,Widowed,White,Female,United States,Executive/Managerial,59091,100461.2876,1,0
+45,28,Private,High School Graduate,Never Married,White,Female,United States,Executive/Managerial,33985,57778.28874,1,0
+40,47,Private,Less than High School,Never Married,Black,Female,United States,Machine Operator/Inspector,41849,71147.96544,1,0
+38,49,Private,High School Graduate,Divorced,White,Female,United States,Administrative/Clerical,35520,60387.95987,1,0
+40,31,Private,Undergraduate Degree,Never Married,White,Female,United States,Executive/Managerial,52500,89255.85284,1,0
+40,26,Private,High School Graduate,Divorced,White,Male,United States,Administrative/Clerical,29500,50153.28874,1,0
+40,38,Federal Government,Undergraduate Degree,Divorced,White,Female,United States,Administrative/Clerical,29771,50614.01895,1,0
+16,50,Self Employed (Unincorporated),Undergraduate Degree,Divorced,White,Male,United States,Craft/Repair,99999,170009.4482,1,0
+40,45,State Government,High School Graduate,Divorced,White,Female,United States,Administrative/Clerical,31076,52832.66444,1,0
+40,26,Private,High School Graduate,Never Married,Black,Male,United States,Administrative/Clerical,32000,54403.56745,1,0

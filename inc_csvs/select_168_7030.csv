@@ -1,0 +1,169 @@
+"Hours per Week","Age","Workclass","Highest Degree","Marital Status","Race","Gender","Native Country","Occupation","Income Actual","Income Adjust","Income","ML Pred","ML Conf"
+38,44,"Private","Undergraduate Degree","Never Married","White","Male","United States","Administrative/Clerical",17537,29814.85507,0,0,0.598196164063078
+40,27,"Private","Undergraduate Degree","Never Married","Black","Female","United States","Tech Support",18500,31452.06243,0,0,0.768717833088397
+40,35,"Private","Undergraduate Degree","Married (Spouse Absent)","Black","Male","United States","Machine Operator/Inspector",7200,12240.80268,0,0,0.637083090660812
+40,47,"State Government","High School Graduate","Divorced","White","Male","United States","Craft/Repair",22059,37502.7592,0,0,0.529700250662264
+40,20,"Private","High School Graduate","Married","White","Male","United States","Sales",17440,29649.94426,0,0,0.796970900615951
+37,21,"Private","High School Graduate","Never Married","White","Female","United States","Other Services",2700,4590.301003,0,0,0.983775924486957
+40,20,"Private","High School Graduate","Never Married","White","Male","United States","Tech Support",4000,6800.445931,0,0,0.952215189872437
+32,24,"Private","High School Graduate","Never Married","White","Female","United States","Sales",6456,10975.91973,0,0,0.978529250854084
+40,39,"Private","High School Graduate","Divorced","White","Female","United States","Executive/Managerial",24575,41780.23969,0,0,0.609762194032969
+35,20,"Private","High School Graduate","Never Married","White","Male","United States","Sales",8000,13600.89186,0,0,0.986748482234154
+12,18,"Private","Less than High School","Never Married","White","Female","United States","Other Services",1100,1870.122631,0,0,0.996802228223391
+20,25,"Private","High School Graduate","Separated","White","Female","United States","Other Services",1800,3060.200669,0,0,0.985938040109609
+40,22,"Private","High School Graduate","Never Married","White","Male","United States","Sales",11615,19746.79487,0,0,0.95137000431646
+15,47,"Private","Less than High School","Divorced","White","Female","United States","Other Services",3500,5950.39019,0,0,0.987535210476604
+35,40,"Private","High School Graduate","Divorced","White","Male","United States","Transport/Moving",10000,17001.11483,0,0,0.798075509977247
+30,68,"Private","Less than High School","Widowed","White","Female","United States","Sales",7478,12713.43367,0,0,0.948447959567781
+40,40,"Private","High School Graduate","Divorced","White","Female","United States","Executive/Managerial",15610,26538.74025,0,0,0.648729965671287
+45,24,"Private","High School Graduate","Never Married","White","Male","United States","Tech Support",19228,32689.74359,0,0,0.822757184354393
+10,21,"Private","High School Graduate","Never Married","White","Male","United States","Professional Specialty",5529,9399.916388,0,0,0.987466615725227
+40,38,"Private","Undergraduate Degree","Divorced","White","Female","United States","Tech Support",21020,35736.34337,0,0,0.560958993764564
+35,21,"Private","High School Graduate","Never Married","White","Male","United States","Administrative/Clerical",4807,8172.435897,0,0,0.977856766194403
+20,21,"Private","High School Graduate","Never Married","White","Female","United States","Administrative/Clerical",2021,3435.925307,0,0,0.990239768613695
+17,24,"Private","High School Graduate","Never Married","White","Female","United States","Administrative/Clerical",5010,8517.558528,0,0,0.984473479192716
+43,25,"Private","Undergraduate Degree","Never Married","White","Male","United States","Other Services",17863,30369.09142,0,0,0.785950691224581
+40,42,"Private","Less than High School","Never Married","White","Male","United States","Farming/Fishing",8320,14144.92754,0,0,0.880525841814825
+45,28,"Private","High School Graduate","Never Married","White","Male","United States","Machine Operator/Inspector",20297,34507.16276,0,0,0.75719200332031
+24,18,"Private","Less than High School","Never Married","White","Male","United States","Other Services",4500,7650.501672,0,0,0.995346865863495
+40,24,"Private","High School Graduate","Married","White","Male","United States","Handler/Cleaner",24024,40843.47826,0,0,0.639205858504953
+50,34,"Private","High School Graduate","Married","White","Male","United States","Farming/Fishing",14964,25440.46823,0,0,0.58264226124165
+40,19,"Private","High School Graduate","Never Married","White","Male","United States","Machine Operator/Inspector",7760,13192.86511,0,0,0.967067473728272
+24,43,"Private","High School Graduate","Divorced","White","Female","United States","Machine Operator/Inspector",10500,17851.17057,0,0,0.947990393668254
+20,34,"Private","High School Graduate","Married","White","Male","United States","Other Services",3800,6460.423634,0,0,0.771683654263592
+40,30,"Private","High School Graduate","Never Married","White","Male","United States","Other Services",22012,37422.85396,0,0,0.936262509875944
+40,22,"Private","High School Graduate","Never Married","White","Female","United States","Sales",2400,4080.267559,0,0,0.964281060919664
+40,19,"Private","Less than High School","Separated","White","Female","United States","Professional Specialty",4055,6893.952062,0,0,0.976473959158887
+40,21,"Private","High School Graduate","Never Married","White","Female","United States","Machine Operator/Inspector",13000,22101.44928,0,0,0.981951036035005
+60,30,"Self Employed (Unincorporated)","High School Graduate","Never Married","White","Female","United States","Administrative/Clerical",29022,49340.63545,0,0,0.750834411436
+18,17,"Private","Less than High School","Never Married","White","Female","United States","Sales",3740,6358.416945,0,0,0.995989070975397
+40,29,"Private","High School Graduate","Never Married","White","Female","United States","Sales",25003,42507.8874,0,0,0.851967372025483
+40,35,"Private","Less than High School","Married","White","Male","United States","Craft/Repair",27922,47470.51282,0,0,0.508525651049822
+28,23,"Private","High School Graduate","Never Married","White","Female","United States","Sales",11105,18879.73802,0,0,0.984567640412285
+42,24,"Private","High School Graduate","Never Married","White","Male","United States","Craft/Repair",4900,8330.546265,0,0,0.869825693789467
+30,21,"Private","High School Graduate","Never Married","White","Female","United States","Other Services",7236,12302.00669,0,0,0.990281650839996
+40,34,"Self Employed (Unincorporated)","High School Graduate","Divorced","White","Male","United States","Farming/Fishing",15000,25501.67224,0,0,0.802002425238052
+22,18,"Private","Less than High School","Never Married","White","Male","United States","Handler/Cleaner",2225,3782.748049,0,0,0.995575820636128
+56,32,"Private","High School Graduate","Never Married","White","Female","United States","Other Services",14661,24925.33445,0,0,0.880374031917088
+40,25,"Private","Less than High School","Divorced","White","Female","United States","Sales",4981,8468.255295,0,0,0.946727050367268
+50,54,"Private","Undergraduate Degree","Never Married","White","Female","United States","Other Services",18524,31492.86511,0,0,0.724767941491668
+20,19,"Private","High School Graduate","Never Married","White","Male","United States","Other Services",4000,6800.445931,0,0,0.992399972384698
+25,21,"Private","High School Graduate","Never Married","White","Female","Germany","Other Services",4576,7779.710145,0,0,0.99024911934861
+40,59,"Private","High School Graduate","Separated","White","Female","United States","Administrative/Clerical",21416,36409.58751,0,0,0.76361281670086
+20,21,"State Government","High School Graduate","Never Married","White","Female","United States","Administrative/Clerical",2661,4523.996656,0,0,0.992927488341334
+20,21,"Private","High School Graduate","Never Married","White","Female","United States","Administrative/Clerical",7283,12381.91193,0,0,0.990239768613695
+42,21,"Private","High School Graduate","Never Married","White","Male","United States","Craft/Repair",11894,20221.12598,0,0,0.940952467647986
+50,28,"Private","High School Graduate","Never Married","White","Male","United States","Handler/Cleaner",25000,42502.78707,0,0,0.873985876929504
+30,18,"Private","High School Graduate","Never Married","White","Female","United States","Other Services",9006,15311.20401,0,0,0.994313550521104
+25,37,"Private","High School Graduate","Divorced","White","Female","Canada","Sales",9351,15897.74247,0,0,0.926046337277645
+40,39,"Private","High School Graduate","Never Married","White","Male","United States","Farming/Fishing",9600,16321.07023,0,0,0.815212352366532
+40,18,"Private","Less than High School","Married","White","Male","United States","Craft/Repair",8300,14110.92531,0,0,0.860149989762645
+40,40,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Craft/Repair",24000,40802.67559,0,1,0.680620627946582
+50,44,"Self Employed (Unincorporated)","Undergraduate Degree","Married","White","Male","United States","Farming/Fishing",15029,25550.97547,0,1,0.648346549913024
+40,44,"Private","Undergraduate Degree","Married","White","Male","United States","Craft/Repair",19560,33254.1806,0,1,0.888332821569018
+50,44,"Private","High School Graduate","Divorced","White","Female","United States","Executive/Managerial",16696,28385.06132,0,1,0.516824064715879
+30,51,"Private","Graduate Degree","Married","White","Male","United States","Sales",18000,30602.00669,0,1,0.800910094450594
+45,39,"Private","Undergraduate Degree","Divorced","White","Male","United States","Craft/Repair",2189,3721.544036,0,1,0.665727485938618
+60,49,"Private","Undergraduate Degree","Married","White","Male","United States","Sales",29176,49602.45262,0,1,0.917929297759606
+50,45,"Private","High School Graduate","Divorced","White","Male","United States","Machine Operator/Inspector",28063,47710.22854,0,1,0.500063374411997
+60,48,"State Government","Graduate Degree","Separated","White","Male","United States","Professional Specialty",4500,7650.501672,0,1,0.876676751275716
+60,30,"Private","Undergraduate Degree","Never Married","White","Female","US Territories (Excluding Puerto Rico)","Professional Specialty",11062,18806.63322,0,1,0.577704499116038
+40,43,"Private","Less than High School","Married","White","Male","United States","Craft/Repair",21323,36251.47715,0,1,0.570605061728636
+45,42,"Private","High School Graduate","Married","White","Male","United States","Administrative/Clerical",25000,42502.78707,0,1,0.831450923807033
+60,33,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Transport/Moving",19030,32353.12152,0,1,0.71699788330329
+70,29,"Private","High School Graduate","Married","White","Male","United States","Transport/Moving",28000,47603.12152,0,1,0.709452399867355
+40,30,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",20000,34002.22965,0,1,0.611703463259055
+40,44,"Private","High School Graduate","Married","White","Male","United States","Transport/Moving",19560,33254.1806,0,1,0.784909092495745
+60,51,"Self Employed (Unincorporated)","High School Graduate","Married","Native American/Eskimo","Male","United States","Executive/Managerial",20530,34903.28874,0,1,0.724355532318684
+70,27,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",21573,36676.50502,0,1,0.685677056970386
+40,57,"Private","High School Graduate","Married","White","Female","United States","Executive/Managerial",27922,47470.51282,0,1,0.871690604319398
+40,39,"Private","High School Graduate","Married","Black","Male","United States","Craft/Repair",16460,27983.83501,0,1,0.714016218671199
+40,59,"Federal Government","Undergraduate Degree","Married","Black","Male","United States","Farming/Fishing",13949,23714.85507,0,1,0.855686397109735
+40,60,"Private","High School Graduate","Married","Black","Male","United States","Machine Operator/Inspector",17000,28901.89521,0,1,0.729234457573496
+40,37,"Private","Undergraduate Degree","Divorced","White","Female","United States","Professional Specialty",28699,48791.49944,0,1,0.585147066799394
+40,40,"Federal Government","High School Graduate","Married","White","Male","United States","Sales",29010,49320.23411,0,1,0.913219828988423
+40,26,"Private","High School Graduate","Married","White","Male","United States","Transport/Moving",8000,13600.89186,0,1,0.561757465124855
+40,32,"Private","Undergraduate Degree","Married","White","Male","United States","Executive/Managerial",77700,132098.6622,1,1,0.904255055907631
+50,48,"Private","Undergraduate Degree","Married","White","Male","United States","Professional Specialty",38300,65114.26979,1,1,0.93960961616666
+60,53,"Private","High School Graduate","Married","White","Male","United States","Sales",99999,170009.4482,1,1,0.845661591428303
+40,52,"Self Employed (Unincorporated)","Undergraduate Degree","Married","White","Male","United States","Sales",83000,141109.2531,1,1,0.783970445604583
+45,43,"Self Employed (Unincorporated)","Undergraduate Degree","Divorced","White","Male","United States","Sales",32200,54743.58974,1,1,0.514705333521731
+36,37,"Private","Graduate Degree","Divorced","White","Male","United States","Professional Specialty",97084,165053.6232,1,1,0.765718456246676
+40,48,"Private","Graduate Degree","Divorced","White","Female","United States","Professional Specialty",35131,59726.6165,1,1,0.779079084219747
+40,47,"Local Government","Undergraduate Degree","Married","White","Female","United States","Administrative/Clerical",92788,157749.9443,1,1,0.869827134569866
+70,45,"Private","Less than High School","Married","White","Male","United States","Sales",41604,70731.43813,1,1,0.701290467331004
+55,45,"Private","Undergraduate Degree","Married","White","Male","United States","Sales",45808,77878.7068,1,1,0.917929297759606
+50,52,"Private","Undergraduate Degree","Married","White","Male","United States","Executive/Managerial",90431,153742.7815,1,1,0.955905380308661
+99,39,"Private","Undergraduate Degree","Married","White","Male","United States","Transport/Moving",99999,170009.4482,1,1,0.877160405563531
+10,46,"Self Employed (Incorporated)","Undergraduate Degree","Married","White","Male","United States","Executive/Managerial",37000,62904.12486,1,1,0.740233187684472
+15,39,"Self Employed (Unincorporated)","High School Graduate","Married","White","Female","United States","Other Services",51700,87895.76366,1,1,0.62251701279585
+45,48,"Private","Undergraduate Degree","Married","White","Male","United States","Sales",33000,56103.67893,1,1,0.914556324972327
+45,38,"Private","High School Graduate","Divorced","White","Male","United States","Professional Specialty",46020,78239.13043,1,1,0.604471821147483
+45,57,"Private","High School Graduate","Married","White","Male","United States","Executive/Managerial",99999,170009.4482,1,1,0.932889102003672
+45,41,"Private","Graduate Degree","Divorced","White","Female","United States","Professional Specialty",49850,84750.55741,1,1,0.828032397395088
+40,27,"Private","Undergraduate Degree","Never Married","White","Male","United States","Professional Specialty",42791,72749.47046,1,1,0.50797362478935
+55,51,"Private","Undergraduate Degree","Married","White","Male","United States","Other Services",43399,73783.13824,1,1,0.79050398944489
+70,42,"Self Employed (Incorporated)","Undergraduate Degree","Married","White","Male","United States","Executive/Managerial",47481,80722.99331,1,1,0.941347849787549
+55,45,"Local Government","Undergraduate Degree","Married","White","Female","United States","Professional Specialty",45150,76760.03344,1,1,0.938304206429437
+65,50,"Private","Less than High School","Married","White","Male","Canada","Transport/Moving",29621,50359.00223,1,1,0.689630234101683
+60,51,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Sales",88000,149609.8105,1,1,0.726130475850617
+39,36,"State Government","High School Graduate","Married","White","Female","United States","Executive/Managerial",81222,138086.4548,1,1,0.872499870806335
+40,40,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Craft/Repair",38878,66096.93423,1,1,0.680620627946582
+45,29,"Private","Undergraduate Degree","Never Married","White","Male","United States","Machine Operator/Inspector",30000,51003.34448,1,1,0.502844831688762
+37,45,"Federal Government","High School Graduate","Married","White","Female","United States","Administrative/Clerical",39011,66323.04905,1,1,0.796004712494632
+50,35,"Private","Graduate Degree","Married","White","Male","United States","Executive/Managerial",65846,111945.5407,1,1,0.96773145834033
+55,39,"Private","Undergraduate Degree","Married","White","Female","United States","Executive/Managerial",86262,146655.0167,1,1,0.94999795480592
+49,48,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Professional Specialty",35000,59503.9019,1,1,0.849645211648505
+40,46,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",65361,111120.9866,1,1,0.847440141095657
+40,44,"Local Government","Graduate Degree","Married","White","Female","United States","Professional Specialty",76071,129329.1806,1,1,0.95874679336234
+48,33,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",50554,85947.4359,1,1,0.762747262734625
+48,42,"Private","High School Graduate","Married","White","Male","United States","Professional Specialty",40788,69344.14716,1,1,0.882127409293975
+40,29,"Private","Undergraduate Degree","Married","White","Male","United States","Sales",66000,112207.3579,1,1,0.787761465902996
+50,44,"Private","Undergraduate Degree","Married","White","Male","United States","Executive/Managerial",31398,53380.10033,1,1,0.955126072990432
+40,39,"Private","Graduate Degree","Married","Asian/Pacific Islander","Male","United States","Executive/Managerial",99999,170009.4482,1,1,0.970111221096358
+40,65,"Federal Government","High School Graduate","Married","Black","Male","United States","Executive/Managerial",72576,123387.291,1,1,0.949451908190409
+40,28,"Private","High School Graduate","Married","Black","Male","United States","Administrative/Clerical",36222,61581.43813,1,1,0.516121820764024
+55,39,"Private","High School Graduate","Married","White","Male","United States","Executive/Managerial",47862,81370.73579,1,1,0.896903888686548
+40,30,"Private","High School Graduate","Married","White","Male","United States","Sales",39050,66389.3534,1,1,0.702486682283929
+45,37,"Local Government","Undergraduate Degree","Married","White","Male","United States","Executive/Managerial",39000,66304.34783,1,1,0.929763070617103
+40,40,"Private","High School Graduate","Married","White","Male","United States","Machine Operator/Inspector",30925,52575.9476,1,1,0.734592196666984
+50,40,"Self Employed (Unincorporated)","Undergraduate Degree","Never Married","White","Male","United States","Professional Specialty",30000,51003.34448,1,1,0.613500088324992
+40,51,"State Government","Less than High School","Married","White","Male","United States","Transport/Moving",31980,54369.56522,1,1,0.561968700886817
+50,47,"Private","Undergraduate Degree","Married","White","Male","United States","Sales",42107,71586.5942,1,1,0.917929297759606
+60,38,"Local Government","High School Graduate","Married","White","Male","United States","Protective Services",59324,100857.4136,1,1,0.855980436344109
+40,31,"Federal Government","High School Graduate","Married","Black","Male","United States","Tech Support",30800,52363.43367,1,1,0.853466989073918
+40,37,"Private","Undergraduate Degree","Married","Black","Male","United States","Executive/Managerial",70200,119347.8261,1,1,0.928594305007337
+40,41,"State Government","Undergraduate Degree","Married","White","Female","United States","Professional Specialty",61002,103710.2007,1,1,0.910076012368651
+44,54,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",39302,66817.78149,1,1,0.835605507863843
+40,53,"Private","High School Graduate","Married","White","Male","United States","Transport/Moving",39200,66644.37012,1,1,0.787988318762546
+60,46,"Private","Undergraduate Degree","Married","White","Male","United States","Tech Support",90600,154030.1003,1,1,0.931572139149962
+52,31,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",46413,78907.27425,1,1,0.757779933575811
+60,47,"Private","Undergraduate Degree","Married","White","Male","United States","Sales",85000,144509.476,1,1,0.917929297759606
+40,34,"Private","High School Graduate","Married","White","Male","United States","Craft/Repair",42052,71493.08807,1,1,0.673682282322407
+40,40,"Federal Government","Undergraduate Degree","Married","White","Male","United States","Protective Services",45201,76846.73913,1,1,0.951522615033738
+40,37,"Self Employed (Incorporated)","Less than High School","Married","White","Male","United States","Craft/Repair",30780,52329.43144,1,1,0.573411006876081
+38,41,"Private","High School Graduate","Divorced","White","Female","United States","Administrative/Clerical",32100,54573.5786,1,0,0.754729620648004
+40,28,"Private","High School Graduate","Never Married","White","Male","United States","Tech Support",33350,56698.71795,1,0,0.740898941749414
+35,47,"Private","High School Graduate","Married","White","Female","United States","Private House Services",60590,103009.7547,1,0,0.559138863525931
+40,30,"Private","Undergraduate Degree","Never Married","White","Female","United States","Tech Support",40200,68344.48161,1,0,0.626140122329062
+40,40,"Private","High School Graduate","Divorced","White","Female","England","Craft/Repair",35025,59546.40468,1,0,0.714479312937675
+40,26,"Private","High School Graduate","Never Married","White","Male","United States","Professional Specialty",31423,53422.60312,1,0,0.787999752089033
+35,43,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Craft/Repair",35236,59905.12821,1,0,0.502351607379151
+16,23,"Private","High School Graduate","Married","White","Female","United States","Sales",38816,65991.52731,1,0,0.844157127357438
+50,29,"Private","High School Graduate","Separated","White","Male","United States","Sales",35000,59503.9019,1,0,0.604732074201019
+40,25,"Private","Less than High School","Married","White","Male","United States","Transport/Moving",34000,57803.79041,1,0,0.677204423697398
+40,29,"Self Employed (Unincorporated)","High School Graduate","Married","White","Male","United States","Farming/Fishing",30214,51367.16834,1,0,0.569151115775018
+35,65,"Self Employed (Incorporated)","Less than High School","Married","White","Male","United States","Executive/Managerial",54311,92334.75474,1,0,0.569211869548722
+40,37,"Local Government","Undergraduate Degree","Never Married","White","Female","United States","Protective Services",30400,51683.38907,1,0,0.558295750527365
+40,40,"Private","High School Graduate","Divorced","White","Female","United States","Tech Support",36964,62842.92085,1,0,0.669016978807718
+20,38,"Self Employed (Incorporated)","Undergraduate Degree","Never Married","White","Female","United States","Craft/Repair",43018,73135.39576,1,0,0.883094831070177
+4,81,"Private","Undergraduate Degree","Married","White","Male","United States","Administrative/Clerical",59539,101222.9376,1,0,0.54515578219729
+40,26,"Private","Graduate Degree","Never Married","Asian/Pacific Islander","Female","Philippines","Professional Specialty",53032,90160.31215,1,0,0.673583254058358
+40,27,"Self Employed (Unincorporated)","Graduate Degree","Never Married","White","Male","United States","Professional Specialty",55046,93584.33668,1,0,0.561193839174418
+40,40,"Private","Less than High School","Married","White","Male","United States","Machine Operator/Inspector",52031,88458.50056,1,0,0.502901813819494
+33,46,"Private","Undergraduate Degree","Never Married","White","Female","United States","Professional Specialty",30030,51054.34783,1,0,0.649732182385663
+32,52,"Private","Less than High School","Married","White","Male","United States","Other Services",34924,59374.69342,1,0,0.81977517292024
+15,75,"Private","Less than High School","Widowed","White","Female","United States","Other Services",38910,66151.33779,1,0,0.986156674489267
+40,48,"Self Employed (Unincorporated)","High School Graduate","Never Married","White","Male","United States","Administrative/Clerical",30050,51088.35006,1,0,0.755274771743223
+40,26,"Private","Graduate Degree","Never Married","White","Male","United States","Professional Specialty",54768,93111.70569,1,0,0.633527071738278
+40,26,"Private","Less than High School","Married","White","Female","United States","Administrative/Clerical",34000,57803.79041,1,0,0.616627100859349
