@@ -14,6 +14,7 @@ import numpy as np
 import serial
 import cedrus_util
 import os
+import socket, subprocess
 
 
 
@@ -25,6 +26,7 @@ def experiment (participantInfo, dataPath):
     
     full = False ### true: use fullmodel.py false: use individual models
     df_split = '7525'
+    thermcamera = True
     numTrials3, blocks3, numCorrectToEnd3 = feat3.trialvalues()
     trainTrials2, trainblocks2 = feat3.trainvalues()
  
@@ -60,6 +62,25 @@ def experiment (participantInfo, dataPath):
     np.random.shuffle(perm)
     percent = [0,0]
 
+    if thermcamera:    
+        # Socket settings.
+        HOST = '127.0.0.1'
+        PORT = 1033
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        
+        # messages to send to thermal camera.
+        msgCollect = 'Collect'
+        msgEndTrial = bytes('Stop', 'utf-8')
+        msgEndExp = bytes('End', 'utf-8')
+
+        try:
+            s.bind((HOST, PORT))
+            s.listen(1) # only one connection
+            print(f"Listening on {HOST}:{PORT}...")
+        except OSError as e:
+            print(f"Error: {e}")
+            win.close()
+            core.quit()
     
     # get portname -- paste Jennys Code.
     portname, keymap = cedrus_util.getname()
@@ -142,10 +163,12 @@ def experiment (participantInfo, dataPath):
 
         print('Percent Correct:',percent[0]/percent[1])
         print(percent)        
-        
+
+
 
     if participantInfo['Section'] == 'Three Feature':
 
+            
         train = False
         df = pd.read_csv(os.path.join(os.getcwd(), '../data/' + 'Subject' + participantInfo['Participant ID']+ '/' +'subject'+participantInfo['Participant ID']+'_Train_'+df_split+'.csv'))
         if full:
@@ -153,11 +176,13 @@ def experiment (participantInfo, dataPath):
 
         if len(start) < len(df):
             start = start * int(np.ceil((len(df)/len(start))))
-        
+        if thermcamera:
+            subprocess.Popen(['python', 'clientNBackV1.py', dataPath])        
+            conn, addr = s.accept() 
 
         experimentData.append(instructions(win, timer, ser, keymap, 10))
         experimentData.append(instructions(win, timer, ser, keymap, 11))
-        
+
         for blk in range(blocks3): ##Guess each block
             ##Skip to next block(s) if necessary
             if blk < int(participantInfo['Block'])-1:
@@ -169,7 +194,7 @@ def experiment (participantInfo, dataPath):
                 combo = start[i]
                 print(combo)
                 print('block:', blk + 1, ' trial:', tNum + 1, ' current index:', i, ':')
-                correct, data = feat3.trial(win, ser, keymap, block = blk, trial = i, frameRate = frameRate, timer = timer, perm = perm, df1 = df,start = combo,mlFeed = train)
+                correct, data = feat3.trial(win, ser, keymap, block = blk, trial = i, frameRate = frameRate, timer = timer, perm = perm, df1 = df,start = combo,mlFeed = train, thermcamera = thermcamera, conn = conn, msgCollect = msgCollect, msgEndTrial = msgEndTrial)
                 print('Participant correct:',correct)
                 experimentData += data
                 print('='*20)

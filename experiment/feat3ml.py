@@ -375,7 +375,7 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
 
 
 
-def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=False, start=None,mlFeed =False):
+def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=False, start=None,mlFeed =False, thermcamera = False, conn = None, msgCollect = None, msgEndTrial = None):
 
     storeData = []
     repeatedStimuli = True
@@ -390,6 +390,13 @@ def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=Fals
     fixation.color = 'white'
     waitFrameTime = np.random.uniform(.5,1)
     fixation.setAutoDraw(True)
+
+    if thermcamera:
+        msgCollectLabel = bytes(msgCollect + str(block) + str(trial), 'utf-8')
+
+		# send message to thermal camera for block 
+        conn.sendall(msgCollectLabel)
+
     for frame in range(int(waitFrameTime*frameRate)): # waits .75 seconds before next trial
         win.flip()
     fixation.setAutoDraw(False)
@@ -427,6 +434,16 @@ def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=Fals
     repeatedStimuli = False
     storeData.append(data)
 
+
+    if thermcamera:
+        conn.sendall(msgEndTrial)
+        
+        # check that the data has been saved.
+        camdata = conn.recv(1024).decode()
+        while camdata != 'Saved':
+            camdata = conn.recv(1024).decode()
+
+            
     if mlFeed:
         optiongenerate(win, ser, keymap, block = block, trial = trial, frameRate = frameRate, timer = timer, type = 'select', feat_lst = feat_lst, attributes = attr, ans = inc, test = test, ml_res = ml_res,options = options,all_feats = all_feats,trialind = trialind, ml_prob = ml_prob, data=data, train = mlFeed)
     ## return model correctness if not training and asking ML
