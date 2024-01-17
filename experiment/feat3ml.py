@@ -48,7 +48,7 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
     pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930, -230))) # photostim bottom analog left
     pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930,-110))) # photostim top digital left ?
     responsewindow = 1 # second to respond in test
-    pkwindow = 10 # second to respond pk
+    pkwindow = 3 # second to respond pk
     if train:
         responsewindow = 60 # 60 seconds to respond in training
     if type =='opt':
@@ -110,6 +110,7 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
         keylist = []
         cedrus_util.clear_buffer(ser)
         reactionTime = False
+        rtFrames = int(responsewindow*frameRate)
         # keep_going = True
         # while keep_going: # 0(n)
         for i in range(int(responsewindow*frameRate)): # 2 sec response window?
@@ -138,8 +139,14 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
             cedrus_util.clear_buffer(ser)
         resp.setAutoDraw(False)
         screenshot.setAutoDraw(False)
-        for i in range(int(0.3*frameRate)):
+        remainingFrames = int(responsewindow*frameRate - rtFrames)
+        print(remainingFrames/frameRate)
+        if train:
+            remainingFrames = 0
+        for i in range(int(remainingFrames + 0.3*frameRate)):
             win.flip()
+        # for i in range(int()):
+        #     win.flip()
         if not reactionTime:
             reactionTime = -.999
             rtFrames = round(reactionTime * frameRate)
@@ -183,9 +190,10 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
             # screenshot2.height = 75
             # screenshot2.pos = (150,0)
             # screenshot2.color = 'royalblue'
-
+            conftime = False
             confstart = timer.getTime()
             # while keep_going:
+            pkrtFrames = int(pkwindow*frameRate)
             for i in range(int(pkwindow*frameRate)):
                 totalFrames += 1
                 win.flip()
@@ -201,24 +209,39 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
                     if press == [1] and key in [[2],[3]]:
                         # screenshot.setAutoDraw(False)
                         # screenshot2.setAutoDraw(False)
-                        kp_prompt.setAutoDraw(False)
                         choice = key
-                        conftime = timer.getTime() - confstart
+                        conftime = timer.getTime() - confstart ## time to response
+                        pkrtFrames = round(conftime * frameRate)
                         win.flip()
                         # feat = options[featind]
                         # print(attributes)
                         # keep_going = False
                         break
                 cedrus_util.clear_buffer(ser)
-
+                
+            kp_prompt.setAutoDraw(False)
+            remainingFrames = int(pkwindow*frameRate - pkrtFrames)
+            print(remainingFrames/frameRate)
+            for i in range(int(remainingFrames + 0.3*frameRate)):
+                win.flip()
+            
+            
+            if not conftime:
+                # reactionTime = -.999
+                # rtFrames = round(reactionTime * frameRate)
+                # reactionTimer = timer.getTime()
+                respkey = -1
+                choice = -1
+            # print(respkey)
 
 
             if choice == [2]:
                 mlFeed = True
-            if choice == [3]:
+            
+            else:# if choice == [3]:
                 mlFeed = False
-                for i in range(int(0.3*frameRate)):
-                    win.flip()
+                # for i in range(int(0.3*frameRate)):
+                #     win.flip()
         else:
             mlFeed = True
         if respkey == [2]:
@@ -250,7 +273,8 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
         if not train: ## punish timer for participants if chosen
             screenshot.text = '...'
             screenshot.setAutoDraw(True)
-            waitFrameTime = np.random.uniform(2,3)
+            # waitFrameTime = np.random.uniform(2,3)
+            waitFrameTime = 2.5
             for frame in range(int(waitFrameTime*frameRate)):
                 # screenshot.draw()
                 win.flip()
@@ -361,16 +385,18 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, feat_lst, a
         pcell[2].setAutoDraw(False)
         for frame in range(int(0.5*frameRate)): # waits .5 second before next trial. The ISI
             win.flip()
-        totalTime = timer.getTime()-startTime
-        totalFrames = round(totalTime*frameRate)  
+        # totalTime = timer.getTime()-startTime
+        totalTime = timer.getTime()- data['Start Time (ms)']/1000
+        totalFrames = round(totalTime*frameRate) 
         data = data.copy()
         data['Final Correct'] = correct
         data['Final Response'] = key
         # data['Model Response'] = ml_res
         # data['Stim Type'] = type
         # data['Start Time (ms)'] =  startTime * 1000
-        data['Total Time (ms)']= totalTime * 1000
+        data['Total Time (ms)']= totalTime * 1000 
         data['Total Frames']= totalFrames
+        print('Total Time of trial:',totalTime,totalFrames)
         return data
 
 
@@ -389,16 +415,19 @@ def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=Fals
     fixation.height = 50
     fixation.color = 'white'
     waitFrameTime = np.random.uniform(.5,1)
+    # waitFrameTime = 0.75
     fixation.setAutoDraw(True)
-
+    
+    for frame in range(int(waitFrameTime*frameRate)): # waits .75 seconds before next trial
+        win.flip()
     if thermcamera:
         msgCollectLabel = bytes(msgCollect + str(block) + str(trial), 'utf-8')
 
 		# send message to thermal camera for block 
         conn.sendall(msgCollectLabel)
 
-    for frame in range(int(waitFrameTime*frameRate)): # waits .75 seconds before next trial
-        win.flip()
+    # for frame in range(int(.5*frameRate)): # waits .75 seconds before next trial
+    #     win.flip()
     fixation.setAutoDraw(False)
     
     inc = df1.iloc[[trial]]['Income'].values[0]
@@ -449,5 +478,8 @@ def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=Fals
     ## return model correctness if not training and asking ML
     if not mlFeed and data['Ask ML']:
         return data['Model Correct'], storeData
+    # waitFrameTime = np.random.uniform(.5,1)
+    # for frame in range(int(waitFrameTime*frameRate)): # waits .5-1 second before next trial. The ISI
+    #     win.flip()
     
     return data['Correct'], storeData

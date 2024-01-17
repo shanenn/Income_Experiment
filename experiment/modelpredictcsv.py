@@ -8,7 +8,7 @@ from itertools import combinations, permutations
 import os
 
 # subject = int(input('Enter Subject Number: '))
-def subject_csv_read(subject,split):
+def subject_csv_read(subject):
     np.random.seed(subject)
     currentPath = os.getcwd()
     dirpath = os.path.join(currentPath, '../data/Subject' +str(subject))
@@ -39,7 +39,14 @@ def subject_csv_read(subject,split):
                 df2.to_csv(subdf,index=False)
             print('Matches:',(pd.read_csv(subdf)['index'] == df2['index']).all())
             
-        
+
+def sub_model_csv_read(subject,split):
+    np.random.seed(subject)
+    currentPath = os.getcwd()
+    dirpath = os.path.join(currentPath, '../data/Subject' +str(subject))
+
+    if not os.path.isdir(dirpath):
+        os.mkdir(dirpath)
     ## Check Session 1-2 dfs
     df_list = [f'{i}{split}.csv' for i in ['Train_','Prac1_','Prac2_']]
     # df_list = ['Train_8020.csv','Prac1_8020.csv','Prac2_8020.csv']
