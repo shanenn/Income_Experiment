@@ -7,7 +7,7 @@ Created on 17/08/2023 15:05:55
 """
 from psychopy.visual import TextStim, GratingStim
 from psychopy import visual, core, logging
-import feat3ml as feat3
+import feat3ml2 as feat3
 from itertools import combinations, permutations
 from instructAndSave import instructions, blockInstructions, informationInputGUI2, saveExperimentData
 import pandas as pd
@@ -15,6 +15,7 @@ import numpy as np
 import serial
 import cedrus_util
 import os
+import socket, subprocess
 
 
 
@@ -26,7 +27,7 @@ def experiment (participantInfo, dataPath):
     
     full = False ### true: use fullmodel.py false: use individual models
     df_split = '7525'
-    thermcamera = True
+    thermcamera = False
     if participantInfo['Section'] == 'Three Feature Training':
         thermcamera = False
     numTrials3, blocks3, numCorrectToEnd3 = feat3.trialvalues()
@@ -64,20 +65,21 @@ def experiment (participantInfo, dataPath):
     np.random.shuffle(perm)
     percent = [0,0]
 
-    # # Socket settings.
-    # HOST = '127.0.0.1'
-    # PORT = 1033
-    # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Socket settings.
+    HOST = '127.0.0.1'
+    PORT = 1033
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    # # messages to send to thermal camera.
-    # msgCollect = 'Collect'
-    # msgEndTrial = bytes('Stop', 'utf-8')
-    # msgEndExp = bytes('End', 'utf-8')
-
+    # messages to send to thermal camera.
+    msgCollect = 'Collect'
+    msgEndTrial = bytes('Stop', 'utf-8')
+    msgEndExp = bytes('End', 'utf-8')
+    conn = None
     try:
-        # s.bind((HOST, PORT))
-        # s.listen(1) # only one connection
-        # print(f"Listening on {HOST}:{PORT}...")
+        if thermcamera:
+            s.bind((HOST, PORT))
+            s.listen(1) # only one connection
+            print(f"Listening on {HOST}:{PORT}...")
 
     
         # get portname -- paste Jennys Code.
@@ -111,7 +113,7 @@ def experiment (participantInfo, dataPath):
         featlight = visual.BufferImageStim(win, stim=[pcell[0]]) #1
 
         resp = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 50) #answer line
-        resp = visual.BufferImageStim(win, stim=[resp]+[pcell[0],pcell[1],pcell[3]]) #2
+        resp = visual.BufferImageStim(win, stim=[resp]+[pcell[0],pcell[3]]) #2
 
 
         mask = GratingStim(win, tex=np.full((256,256),-1), mask=None, size=(550,50)) #3
@@ -119,19 +121,17 @@ def experiment (participantInfo, dataPath):
 
         keep_txt = visual.TextStim(win,text = "Pass",color='red',font='FreeSans',height = 75,wrapWidth = 550,contrast = 2,pos = (-150,0))
         pass_txt = visual.TextStim(win,text = "Keep",color='royalblue',font='FreeSans',height = 75,wrapWidth = 550,contrast = 2,pos = (150,0))
-        kp_prompt = visual.BufferImageStim(win, stim = [keep_txt]+[pass_txt]+[pcell[0],pcell[1],pcell[3]]) #5
+        kp_prompt = visual.BufferImageStim(win, stim = [keep_txt]+[pass_txt]+[pcell[0],pcell[3]]) #5
 
         firstlight = visual.BufferImageStim(win, stim=pcell[:2]) #7
         fixation = TextStim(win, text = '+', pos = (0,0),height = 50)
 
-        screens = {'featlight':featlight, 'resp':resp, 'mask':mask,'screenshot':screenshot,'kp_prompt':kp_prompt,
-                   'firstlight':firstlight,'fixation': fixation,
-                   'pcell2':pcell[2],'cameraCell':pcell[1]}
+        screens = {'featlight':featlight,'resp':resp,'mask':mask,'screenshot':screenshot,'kp_prompt':kp_prompt,'firstlight':firstlight,'fixation': fixation,'pcell2':pcell[2]}
                 
-        # if thermcamera:
-        #     # wait for connection
-        #     subprocess.Popen(['python', 'clientexperiment.py', dataPath])        
-        #     conn, addr = s.accept()
+        if thermcamera:
+            # wait for connection
+            subprocess.Popen(['python', 'clientexperiment.py', dataPath])        
+            conn, addr = s.accept()
         #### start experiment
         experimentData.append(instructions(win, timer, ser, keymap, 0))
         experimentData.append(instructions(win, timer, ser, keymap, 1))
@@ -175,8 +175,8 @@ def experiment (participantInfo, dataPath):
                         if correct:
                             percent[0] += 1
                         percent[1] += 1
-                        print('Current percent:',percent[0]/percent[1])
-                    # 
+
+                    print('Current percent:',percent[0]/percent[1])
 
                 experimentEndTime = timer.getTime() * 1000
                 saveExperimentData(participantInfo, experimentStartTime, experimentEndTime, experimentData, blk, dataPath)
@@ -187,7 +187,7 @@ def experiment (participantInfo, dataPath):
                 else:
                     experimentData.append(blockInstructions(win, timer, ser, keymap, blk + 1, trainblocks2,percent=percent))
 
-            # print('Percent Correct:',percent[0]/percent[1])
+            print('Percent Correct:',percent[0]/percent[1])
             print(percent)        
 
 
@@ -219,7 +219,7 @@ def experiment (participantInfo, dataPath):
                     combo = start[i]
                     print(combo)
                     print('block:', blk + 1, ' trial:', tNum + 1, ' current index:', i, ':')
-                    correct, data = feat3.trial(win, ser, keymap, block = blk, trial = i, frameRate = frameRate, timer = timer, perm = perm, df1 = df,start = combo,mlFeed = train, thermcamera = thermcamera, screens=screens)
+                    correct, data = feat3.trial(win, ser, keymap, block = blk, trial = i, frameRate = frameRate, timer = timer, perm = perm, df1 = df,start = combo,mlFeed = train, thermcamera = thermcamera, conn = conn, msgCollect = msgCollect, msgEndTrial = msgEndTrial, screens=screens)
                     print('Participant correct:',correct)
                     experimentData += data
                     print('='*20)
@@ -244,15 +244,16 @@ def experiment (participantInfo, dataPath):
                 else:
                     experimentData.append(blockInstructions(win, timer, ser, keymap, blk + 1, blocks3,percent=percent))
 
-            # print('Percent Correct:',percent[0]/percent[1])   
+            print('Percent Correct:',percent[0]/percent[1])   
     
     except OSError as e:
         print(f"Error: {e}")
         
-    #finally:
-        # if thermcamera:
-        #     conn.sendall(msgEndExp)
-        #     s.close()
+    finally:
+        if thermcamera:
+            conn.sendall(msgEndExp)
+            s.close()
+
         win.close()
         core.quit()
         

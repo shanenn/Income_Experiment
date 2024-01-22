@@ -25,9 +25,6 @@ def experiment (participantInfo, dataPath):
     trainTrials,trainblocks = disp10.trainvalues()#numTrials*blocks - 195 ###195 is number of real trials = 1
     numTrials2, blocks2, numCorrectToEnd2 = pick1.trialvalues()
 
-        
-        
-        
     if blocks * numTrials < numCorrectToEnd:
         print('Number Correct to end too large')
         core.quit()
