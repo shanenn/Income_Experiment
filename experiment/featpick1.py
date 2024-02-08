@@ -16,7 +16,8 @@ def trialvalues():
     return trials,blocks,numCorr
 
 def xstart(button):
-    x = (np.ceil(len(button)/2) * 100) - 100
+    # x = (np.ceil(len(button)/2) * 100) - 100
+    x = (np.ceil(len(button)/2) * 200) - 200
     return -x
 
 def deterMove(key,posi,options):
@@ -61,10 +62,13 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, totalStimul
         ## display the information (feat: attributes[feat].values[0])##
             line = feat+': ' + str(attributes[feat].values[0])
             all_feats[feat] = attributes[feat].values[0]
-            stimit = TextStim(win, text = line, color = 'white', pos = (0,y),font='freesans')
+            # stimit = TextStim(win, text = line, color = 'white', pos = (0,y),font='freesans')
+            stimit = TextStim(win, text = line, color = 'white', pos = (0,y),font='freesans',height = 42,wrapWidth = 950)
             stim.append(stimit)
-            y -= 60
-        stim.append(TextStim(win, text = '<$50,000\t\t\t>$50,000',color = 'white', pos = (0,-400))) #answer line
+            # y -= 60
+            y -= 100
+        # stim.append(TextStim(win, text = '<$50,000\t\t\t>$50,000',color = 'white', pos = (0,-400))) #answer line
+        stim.append(TextStim(win, text = '<$50,000\t\t\t>$50,000',color = 'white', pos = (0,-400),height = 42,wrapWidth = 950)) #answer line
         pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(930,-230))) # photostim bottom analog right
         pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(930,-110))) # photostim top digital right
         pcell1 = visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(930,-230)) # photostim bottom analog right
@@ -83,15 +87,19 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, totalStimul
                 #print(ind,item)
                 if ind == int(len(options)/2):
                     x = xstart(options)
-                    y = -250
+                    # y = -250
+                    y = -300
                 ## choose highlight based on position
                 if ind == posi:
-                    disp = TextStim(win, text = item, color = 'white', pos = (x,y),font = 'freesans')
+                    # disp = TextStim(win, text = item, color = 'white', pos = (x,y),font = 'freesans')
+                    disp = TextStim(win, text = item, color = 'white', pos = (x,y),font = 'freesans',height = 42,wrapWidth = 950)
                 else:
-                    disp = TextStim(win, text = item, color = 'black', pos = (x,y),font = 'freesans')
+                    # disp = TextStim(win, text = item, color = 'black', pos = (x,y),font = 'freesans')
+                    disp = TextStim(win, text = item, color = 'black', pos = (x,y),font = 'freesans',height = 42,wrapWidth = 950)
                 #stim.append(disp)
                 all_opt.append(disp)
-                x += 200
+                # x += 200
+                x += 400
         full = stim+all_opt
         screenshot = visual.BufferImageStim(win, stim= full)
         light = visual.BufferImageStim(win, stim= full + pcell)
@@ -203,7 +211,8 @@ def optiongenerate(win, ser, keymap, block, trial, frameRate, timer, totalStimul
         # photocell1.setAutoDraw(False)
         #photocell2.setAutoDraw(False)
         fixation = TextStim(win, text = '+', pos = (0,0))
-        fixation.height = 50
+        # fixation.height = 50
+        fixation.height = 85
         photocell1 = visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930, -230))
         photocell1.setAutoDraw(True)
         
@@ -274,7 +283,8 @@ def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=Fals
     suppress = 2 #how many features to start - 1
     ## White fixation for 750 ms
     fixation = TextStim(win, text = '+', pos = (0,0))
-    fixation.height = 50
+    # fixation.height = 50
+    fixation.height = 85
     fixation.color = 'white'
     waitFrameTime = int(0.5 * frameRate)
     fixation.setAutoDraw(True)

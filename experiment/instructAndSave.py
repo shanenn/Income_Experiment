@@ -16,7 +16,7 @@ def instructions(win, timer, ser, keymap, part):
     
     ## General Instruction
     if part == 0:
-        instructions = GratingStim(win, tex=None, mask=None, size=(550,50))
+        instructions = GratingStim(win, tex=None, mask=None, size=(750,50))
         
 
     if part == 1:
@@ -106,7 +106,8 @@ def instructions(win, timer, ser, keymap, part):
     
 
 
-
+    instructions.height = 42
+    instructions.wrapWidth = 950
     instructions.setAutoDraw(True)
     keep_going = True
     totalFrames = 0
@@ -129,10 +130,10 @@ def instructions(win, timer, ser, keymap, part):
     # convert the time of correct button push
 
     try:
-    	endTimeCedrus = cedrus_util.HexToRt(cedrus_util.BytesListToHexList(time))
+        endTimeCedrus = cedrus_util.HexToRt(cedrus_util.BytesListToHexList(time))
     except IndexError:
-    	print('Index Error Instance Caught')
-    	endTimeCedrus = 999
+        print('Index Error Instance Caught')
+        endTimeCedrus = 999
     
     instructions.setAutoDraw(False)
             
@@ -150,7 +151,8 @@ def blockInstructions(win, timer, ser, keymap, block, blocks, percent = None):#,
                                         'to give further instructions. When prompted, press any button to continue.'
                                          , pos = (0,0))
 
-    
+    instructions.height = 42
+    instructions.wrapWidth = 950
     instructions.setAutoDraw(True)
     keep_going = True
     totalFrames = 0
@@ -174,10 +176,10 @@ def blockInstructions(win, timer, ser, keymap, block, blocks, percent = None):#,
     
     
     try:
-    	endTimeCedrus = cedrus_util.HexToRt(cedrus_util.BytesListToHexList(time))
+        endTimeCedrus = cedrus_util.HexToRt(cedrus_util.BytesListToHexList(time))
     except IndexError:
-    	print('Index Error Instance Caught')
-    	endTimeCedrus = 999
+        print('Index Error Instance Caught')
+        endTimeCedrus = 999
     
     instructions.setAutoDraw(False)
             

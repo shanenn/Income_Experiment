@@ -106,27 +106,32 @@ def experiment (participantInfo, dataPath):
         pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(930,-230))) # photostim bottom analog right
         pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(930,-110))) # photostim top digital right
         pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930, -230))) # photostim bottom analog left
-        pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930,-110))) # photostim top digital left ?
+        # pcell.append(visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930,-110))) # photostim top digital left
 
-        featlight = visual.BufferImageStim(win, stim=[pcell[0]]) #1
+        # featlight = visual.BufferImageStim(win, stim=pcell[1:]) #1
 
-        resp = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 50) #answer line
-        resp = visual.BufferImageStim(win, stim=[resp]+[pcell[0],pcell[1],pcell[3]]) #2
+        # resp = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 50) #answer line
+        resp = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 85) #answer line
+        resp = visual.BufferImageStim(win, stim=[resp]+[pcell[1]]) #+[pcell[0]]2
 
 
-        mask = GratingStim(win, tex=np.full((256,256),-1), mask=None, size=(550,50)) #3
-        screenshot = visual.TextStim(win,text = '',color='white',font='FreeSans',height = 28,wrapWidth = 550,contrast = 2,pos = (0,0)) # 4
+        # mask = GratingStim(win, tex=np.full((256,256),-1), mask=None, size=(550,50)) #3
+        # screenshot = visual.TextStim(win,text = '',color='white',font='FreeSans',height = 28,wrapWidth = 550,contrast = 2,pos = (0,0)) # 4
 
-        keep_txt = visual.TextStim(win,text = "Pass",color='red',font='FreeSans',height = 75,wrapWidth = 550,contrast = 2,pos = (-150,0))
-        pass_txt = visual.TextStim(win,text = "Keep",color='royalblue',font='FreeSans',height = 75,wrapWidth = 550,contrast = 2,pos = (150,0))
-        kp_prompt = visual.BufferImageStim(win, stim = [keep_txt]+[pass_txt]+[pcell[0],pcell[1],pcell[3]]) #5
+        # keep_txt = visual.TextStim(win,text = "Pass",color='red',font='FreeSans',height = 75,wrapWidth = 550,contrast = 2,pos = (-150,0))
+        # pass_txt = visual.TextStim(win,text = "Keep",color='royalblue',font='FreeSans',height = 75,wrapWidth = 550,contrast = 2,pos = (150,0))
+        screenshot = visual.TextStim(win,text = '',color='white',font='FreeSans',height = 42,wrapWidth = 950,contrast = 2,pos = (0,0)) # 4
 
-        firstlight = visual.BufferImageStim(win, stim=pcell[:2]) #7
-        fixation = TextStim(win, text = '+', pos = (0,0),height = 50)
+        keep_txt = visual.TextStim(win,text = "Pass",color='red',font='FreeSans',height = 100,wrapWidth = 950,contrast = 2,pos = (-150,0))
+        pass_txt = visual.TextStim(win,text = "Keep",color='royalblue',font='FreeSans',height = 100,wrapWidth = 950,contrast = 2,pos = (150,0))
+        kp_prompt = visual.BufferImageStim(win, stim = [keep_txt]+[pass_txt]+[pcell[1]]) #+[pcell[0]]5
 
-        screens = {'featlight':featlight, 'resp':resp, 'mask':mask,'screenshot':screenshot,'kp_prompt':kp_prompt,
-                   'firstlight':firstlight,'fixation': fixation,
-                   'pcell2':pcell[2],'cameraCell':pcell[1]}
+        # firstlight = visual.BufferImageStim(win, stim=pcell) #7
+        # fixation = TextStim(win, text = '+', pos = (0,0),height = 50)
+        fixation = TextStim(win, text = '+', pos = (0,0),height = 85)
+
+        screens = {'resp':resp, 'screenshot':screenshot,'kp_prompt':kp_prompt,'fixation': fixation,
+                   'anaRight':pcell[0],'cameraCell':pcell[1],'anaLeft':pcell[2]}
                 
         # if thermcamera:
         #     # wait for connection

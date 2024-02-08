@@ -45,14 +45,17 @@ def generatePage(win, ser, keymap, block, trial, frameRate, timer, feat_lst, att
         firstlight = visual.BufferImageStim(win, stim=pcell)
         #featlight = visual.BufferImageStim(win, stim=featpcell)
         featlight = visual.BufferImageStim(win, stim=[featpcell])
-        options = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 50) #answer line
+        # options = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 50) #answer line
+        options = visual.TextStim(win, text = '+',color = 'yellow',pos = (0,0), height = 85) #answer line
         #print(options.font)
         options = visual.BufferImageStim(win, stim=[options]+[pcell[0],digleft])
         #y = 240 #225
         y = 0
-        screenshot = visual.TextStim(win,text = '',color='white',font='FreeSans',height = 28,wrapWidth = 550,contrast = 2)
+        # screenshot = visual.TextStim(win,text = '',color='white',font='FreeSans',height = 28,wrapWidth = 550,contrast = 2)
+        screenshot = visual.TextStim(win,text = '',color='white',font='FreeSans',height = 42,wrapWidth = 950,contrast = 2)
         myTex = np.full((256,256),-1)
-        mask = GratingStim(win, tex=myTex, mask=None, size=(550,50))
+        # mask = GratingStim(win, tex=myTex, mask=None, size=(550,50))
+        mask = GratingStim(win, tex=myTex, mask=None, size=(950,50))
         #myStim = 
 #myStim.draw()
 #win.flip()
@@ -149,7 +152,8 @@ def generatePage(win, ser, keymap, block, trial, frameRate, timer, feat_lst, att
         # photocell1.setAutoDraw(False)
         #photocell2.setAutoDraw(False)
         fixation = TextStim(win, text = '+', pos = (0,0))
-        fixation.height = 50
+        # fixation.height = 50
+        fixation.height = 85
         photocell1 = visual.ImageStim(win=win, image='./photocell/rect.png', units="pix", pos=(-930, -230))
         photocell1.setAutoDraw(True) 
         if (key == [2] and ans == 0) or (key == [3] and ans == 1):
@@ -205,7 +209,8 @@ def trial(win, ser, keymap, block, trial, frameRate, timer, perm, df1, test=Fals
     
     ## White fixation for 750 ms
     fixation = TextStim(win, text = '+', pos = (0,0))
-    fixation.height = 50
+    # fixation.height = 50
+    fixation.height = 85
     fixation.color = 'white'
 
     waitFrameTime = np.random.uniform(.5,1)
